@@ -1,0 +1,129 @@
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    min-height: 100vh;
+    max-height: 100vh;
+    padding: 70px 0 ;
+}
+.container.active{
+    filter: blur(10px);
+}
+.box{
+    height: 100%;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Définit 4 colonnes de largeur égale */
+    grid-gap: 15px;
+    align-items: center;
+    justify-content: space-evenly;
+    max-height: 100vh;
+    padding: 70px 0;
+    overflow: auto;
+    scrollbar-color: #007bff #cfe8fd;
+    scrollbar-width: thin ;
+    padding: 10px 20px;
+    /*padding: 30% 0 20% 0;*/
+
+    
+
+
+}
+.items{
+    display: block;
+    background-color: #ffffff;
+    width: 255px;
+    height: 210px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}
+.icon{
+    height: 130px;
+    width: 100%;
+    padding: 10px 15px;
+    border: #ebebeb solid;
+    border-width: 0 0 1px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 100%;
+    width: auto;
+}
+.fileinfo{
+    height: 80px;
+    width: 100% ;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.filename{
+    color: #6c757d !important;
+}
+.metadata{
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.filesize{
+    color: #007bff;
+    height: 100%;
+    width: fit-content;
+    font-size: 80%;
+}
+.filedate{
+    color: #6c757d !important;
+    height: 100%;
+    width: fit-content;
+    font-size: 80%;
+}
+@media (pointer: coarse) and (orientation: portrait) and (max-width: 700px){
+    .box{
+        grid-template-columns: repeat(1, 1fr); /* Définit 4 colonnes de largeur égale */
+        width: 100%;
+        height: 100%;
+        /*padding: 30% 0 20% 0;*/
+        overflow: auto;
+        height: 100%;
+        padding: 70px 0;
+    }
+    .items{
+        justify-self: center;
+        width: 80%;
+    }
+}
+@media (max-width: 1000px){
+    .box{
+        grid-template-columns: repeat(3, 1fr); /* Définit 4 colonnes de largeur égale */
+    }
+
+}
+@media (max-width: 800px){
+    .box{
+        grid-template-columns: repeat(2, 1fr); /* Définit 4 colonnes de largeur égale */
+    }
+
+}
+@media (max-width: 650px){
+    .box{
+        grid-template-columns: repeat(1, 1fr); /* Définit 4 colonnes de largeur égale */
+        width: 100%;
+        height: 100%;
+        
+    }
+    .items{
+        justify-self: center;
+        width: 80%;
+    }
+}
